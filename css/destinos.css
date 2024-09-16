@@ -1,28 +1,38 @@
 .container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url(../assets/montainWallpaper.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  height: unset;
 }
 body,
 html {
-  overflow: unset;
+  min-height: 100%; /* Asegura que el body crezca con el contenido */
+  overflow-x: hidden; /* Evitar scroll horizontal innecesario */
+  overflow-y: auto;
   height: 100%;
 }
 .card-box {
   display: flex;
+  flex: 1;
+  flex-wrap: wrap; /* Esto permite que las tarjetas se muevan a la siguiente línea si el espacio es insuficiente */
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   height: 100%;
+  padding: 3rem;
 }
 
 .card {
   background-size: cover;
   background-color: black;
   padding: 10px;
-  width: 280px;
-  height: 400px;
   display: flex;
-
+  flex-basis: 30%; /* Permite que las tarjetas ocupen un 30% del espacio disponible */
+  max-width: 400px; /* Limita el tamaño máximo de las tarjetas */
+  min-width: 350px; /* Establece un tamaño mínimo para las tarjetas en pantallas pequeñas */
+  height: 500px;
   flex-direction: column;
   border-radius: 10px;
   align-items: center;
@@ -57,12 +67,13 @@ p {
   font-size: 2.2rem;
 }
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 @media screen and (max-width: 600px) {
   /* Estilos para móviles pequeños */
   .card-box {
     flex-direction: column;
     padding-bottom: 2rem;
+    margin-top: 3rem;
   }
 }

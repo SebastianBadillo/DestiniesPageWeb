@@ -34,6 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 5rem;
+  margin-top: 2rem;
 }
 .navbar ul {
   display: flex;
@@ -45,7 +46,7 @@ body {
 .navbar li {
   display: flex;
 }
-.navbar a {
+.navbar .navItem {
   color: white;
   text-decoration: none;
   font-size: 2rem;
@@ -57,13 +58,13 @@ body {
   font-style: normal;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-a:hover {
+.navItem:hover {
   /* color: black; */
   transform: scale(1.2); /* Escala el enlace al 120% de su tamaño original */
   color: #ffd700;
 }
 
-a::after {
+.navItem::after {
   content: "";
   position: absolute;
   left: 0;
@@ -76,7 +77,7 @@ a::after {
   transform-origin: right;
 }
 
-a:hover::after {
+.navItem:hover::after {
   transform: scaleX(1); /* Subrayado completo al hacer hover */
   transform-origin: left;
 }
@@ -114,4 +115,36 @@ a:hover::after {
     font-size: 4rem !important;
     padding: auto;
   }
+}
+/* Define la animación de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    background-color: black; /* Fondo negro al inicio */
+  }
+  to {
+    opacity: 1;
+    background-color: black; /* Fondo negro al inicio */
+  }
+}
+
+/* Aplica la animación al body o a cualquier otro contenedor principal */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+.card-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cleanA {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Elimina el color del enlace y hereda el color del elemento padre */
+}
+
+.cleanA:hover,
+.cleanA:focus,
+.cleanA:active {
+  text-decoration: none; /* Asegura que no aparezca subrayado en hover o al enfocarse */
+  color: inherit; /* Mantiene el color heredado en cualquier estado */
 }
