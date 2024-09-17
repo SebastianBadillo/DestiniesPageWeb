@@ -1,3 +1,4 @@
+/* CONTAINER */
 .container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url(../assets/montainWallpaper.jpg);
@@ -8,11 +9,17 @@
 }
 body,
 html {
-  min-height: 100%; /* Asegura que el body crezca con el contenido */
-  overflow-x: hidden; /* Evitar scroll horizontal innecesario */
+  min-height: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
 }
+/* NAVBAR ACTIVE SECTION*/
+.active {
+  color: #ffd700 !important;
+}
+
+/* CARD BOX */
 .card-box {
   display: flex;
   flex: 1;
@@ -23,15 +30,14 @@ html {
   height: 100%;
   padding: 3rem;
 }
-
+/* CARDS  */
 .card {
   background-size: cover;
-  background-color: black;
   padding: 10px;
   display: flex;
-  flex-basis: 30%; /* Permite que las tarjetas ocupen un 30% del espacio disponible */
-  max-width: 400px; /* Limita el tamaño máximo de las tarjetas */
-  min-width: 350px; /* Establece un tamaño mínimo para las tarjetas en pantallas pequeñas */
+  flex-basis: 30%;
+  max-width: 400px;
+  min-width: 300px;
   height: 500px;
   flex-direction: column;
   border-radius: 10px;
@@ -40,9 +46,10 @@ html {
   font-family: "Space Grotesk", sans-serif;
   transition: transform 0.3s ease;
 }
-.active {
-  color: #ffd700 !important;
+.card:hover {
+  transform: scale(1.1);
 }
+/* BACKGROUNDS */
 .kioto {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../assets/kioto.jpeg);
@@ -56,19 +63,13 @@ html {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../assets/italy.jpg);
 }
-img {
-  width: 100%;
-  border-radius: 10px;
-  max-height: 35rem;
-}
+
 p {
   color: white;
   font-family: "Space Grotesk", sans-serif;
   font-size: 2.2rem;
 }
-.card:hover {
-  transform: scale(1.1);
-}
+/* RESPONSIVE */
 @media screen and (max-width: 600px) {
   /* Estilos para móviles pequeños */
   .card-box {

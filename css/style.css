@@ -1,7 +1,6 @@
 /* Global Config */
 html {
-  font-size: 62.5%;
-  /*The upper lines are vital, it allows that 1 rem = 10px*/
+  font-size: 62.5%; /* it allows that 1 rem = 10px*/
   box-sizing: border-box;
   scroll-snap-type: y mandatory;
 }
@@ -18,7 +17,7 @@ body {
   overflow: hidden;
 }
 
-/* */
+/* CONTAINER */
 .container {
   height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.644)),
@@ -28,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+/* NAVBAR*/
 .navbar {
   display: flex;
   justify-content: center;
@@ -46,7 +45,8 @@ body {
 .navbar li {
   display: flex;
 }
-.navbar .navItem {
+/* NAVITEM */
+.navItem {
   color: white;
   text-decoration: none;
   font-size: 2rem;
@@ -71,7 +71,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #ffd700; /* Misma opción de color que el hover */
+  background-color: #ffd700;
   transform: scaleX(0); /* Comienza oculto */
   transition: transform 0.3s ease;
   transform-origin: right;
@@ -81,6 +81,8 @@ body {
   transform: scaleX(1); /* Subrayado completo al hacer hover */
   transform-origin: left;
 }
+
+/* TITLE */
 .title {
   width: 100%;
   font-size: 4.5rem;
@@ -103,12 +105,15 @@ body {
   animation: slideUp 1s forwards;
 }
 
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cleanA,
+.cleanA:hover,
+.cleanA:focus,
+.cleanA:active {
+  text-decoration: none;
+  color: inherit;
 }
+
+/* RESPONSIVE */
 @media screen and (max-width: 480px) {
   /* Estilos para móviles pequeños */
   h1 {
@@ -116,35 +121,27 @@ body {
     padding: auto;
   }
 }
+
+/* KEY FRAMES */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Define la animación de fade-in */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    background-color: black; /* Fondo negro al inicio */
+    background-color: black;
   }
   to {
     opacity: 1;
-    background-color: black; /* Fondo negro al inicio */
+    background-color: black;
   }
 }
 
-/* Aplica la animación al body o a cualquier otro contenedor principal */
+/* FADE EFFECT*/
 .fade-in {
   animation: fadeIn 0.3s ease-in-out;
-}
-.card-box a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.cleanA {
-  text-decoration: none; /* Elimina el subrayado */
-  color: inherit; /* Elimina el color del enlace y hereda el color del elemento padre */
-}
-
-.cleanA:hover,
-.cleanA:focus,
-.cleanA:active {
-  text-decoration: none; /* Asegura que no aparezca subrayado en hover o al enfocarse */
-  color: inherit; /* Mantiene el color heredado en cualquier estado */
 }

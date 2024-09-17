@@ -1,39 +1,15 @@
+/* CONTAINER */
 .contact__container {
   display: flex;
   flex: 1;
 }
+
+/* CONTACT BOX*/
 .contact__box {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex: 1;
-  justify-content: center;
-  color: white;
-}
-form {
-  display: flex;
+  width: 100%;
   flex-direction: column;
-  padding: 50px;
-}
-img {
-  max-height: unset;
-  width: 500px;
-  max-height: 800px;
-}
-h3 {
-  text-align: center;
-  font-family: "Space Grotesk", sans-serif;
-}
-label,
-input,
-textarea {
-  font-size: 1.5rem;
-  font-family: "Space Grotesk", sans-serif;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+  color: white;
 }
 .contact__title {
   font-size: 3rem;
@@ -42,12 +18,8 @@ textarea {
   margin-top: 15rem;
   margin-bottom: 2rem;
 }
-.contact__box {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
 
+/* CONTACT FORM*/
 .contact__form {
   display: flex;
   justify-content: center;
@@ -57,9 +29,19 @@ textarea {
   width: 100%;
   color: black;
 }
-.row {
+/* FORM */
+form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 50px;
+  gap: 2rem;
+}
+/* LABEL, iNPUT, TEXTAREA CONFIG*/
+label,
+input,
+textarea {
+  font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
 }
 label {
   display: block;
@@ -74,20 +56,20 @@ textarea {
   width: 100%;
   border: none;
 }
-input:focus {
-  border: none;
-}
-.wd-100 {
-  width: 100%;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
 textarea {
   resize: vertical;
 }
+/* USEFUL CLASsES*/
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.wd-100 {
+  width: 100%;
+}
+/* BUTTON */
 button {
   background-color: #ffd700;
   padding: 4px;
